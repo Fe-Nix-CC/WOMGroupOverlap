@@ -1,3 +1,5 @@
+# Check if two groups on wise old man have overlap
+
 group1="7802" # Fe Nix clan ID
 group2="1230" # f2p im clan ID
 
@@ -6,7 +8,7 @@ echo "Starting check for overlap between groups..."
 
 # create a temporary directory to download files in
 tempdir=`mktemp -d` || exit 1
-cd $tempdir 
+cd $tempdir
 
 # download csv of users for both groups
 wget "http://api.wiseoldman.net/v2/groups/$group1/csv" -O group1.csv -q
